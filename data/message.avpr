@@ -1,0 +1,24 @@
+{
+    "namespace": "avro",
+    "protocol": "messageProtocol",
+    "doc": "This is a message.",
+    "name": "Message",
+
+    "types": [
+        {"name":"message", "type":"record",
+            "fields":[
+                {"name":"name", "type":"string"},
+                {"name":"type", "type":"int"},
+                {"name":"price", "type":"double"},
+                {"name":"valid", "type":"boolean"}
+            ]}
+    ],
+
+    "messages":    {
+        "sendMessage":{
+            "doc" : "test",
+            "request" :[{"name":"message","type":"message" }],
+            "response" :"message"
+        }
+    }
+}

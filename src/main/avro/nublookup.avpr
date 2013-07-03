@@ -1,0 +1,34 @@
+{
+    "namespace": "org.gbif.ecat.ws",
+    "protocol": "NubLookup",
+    "types": [
+        {"name": "Request", "type": "record",
+            "fields": [
+                {"name": "kingdom", "type": ["string", "null"]},
+                {"name": "phylum", "type": ["string", "null"]},
+                {"name": "class", "type": ["string", "null"]},
+                {"name": "order", "type": ["string", "null"]},
+                {"name": "family", "type": ["string", "null"]},
+                {"name": "genus", "type": ["string", "null"]},
+                {"name": "name", "type": ["string", "null"]}
+            ]
+        },
+        {"name": "Response", "type": "record",
+            "fields": [
+                {"name": "kingdomId", "type": ["int", "null"]},
+                {"name": "phylumId", "type": ["int", "null"]},
+                {"name": "classId", "type": ["int", "null"]},
+                {"name": "orderId", "type": ["int", "null"]},
+                {"name": "familyId", "type": ["int", "null"]},
+                {"name": "genusId", "type": ["int", "null"]},
+                {"name": "nameId", "type": ["int", "null"]}
+            ]
+        }
+    ],
+    "messages": {
+        "send": {
+            "request": [{"name": "request", "type": "Request"}],
+            "response": "Response"
+        }
+    }
+}
